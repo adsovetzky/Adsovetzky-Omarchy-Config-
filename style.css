@@ -1,12 +1,14 @@
 @import "../omarchy/current/theme/waybar.css";
 
 * {
+  /* background-color: @background; */
   color: @foreground;
+
   border: none;
   border-radius: 0;
-  min-height: 0;
-  font-family: CaskaydiaMono Nerd Font;
-  font-size: 12px;
+  min-height: 13px;
+  font-family: 'JetBrains Mono';
+  font-size: 13px;
 }
 
 window#waybar {
@@ -19,7 +21,11 @@ window#waybar {
 }
 
 .modules-right {
-  margin-right: 8px;
+  background-color: @background;
+  color: @foreground;
+  border-radius: 10px;
+  padding: 0 10px;
+  margin: 5px 8;
 }
 
 #workspaces button {
@@ -33,13 +39,13 @@ window#waybar {
   opacity: 0.5;
 }
 
-#mpris,
+#window,
+#pulseaudio,
 #tray,
 #cpu,
 #battery,
 #network,
 #bluetooth,
-#pulseaudio,
 #clock,
 #custom-omarchy,
 #workspaces,
@@ -48,15 +54,7 @@ window#waybar {
   color: @foreground;
   border-radius: 10px;
   padding: 0 10px;
-  margin: 5px 2px;
-}
-
-#network {
-  padding-right: 14px;
-}
-
-#pulseaudio {
-  padding-right: 15px;
+  margin: 5px 2;
 }
 
 #custom-omarchy {
